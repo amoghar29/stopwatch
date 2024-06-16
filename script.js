@@ -38,11 +38,9 @@ document.getElementById('lapse').addEventListener('click', function(){
 });
  
 document.getElementById('pause').addEventListener('click', function(){
-    if (!isPaused){
     clearInterval(interval);
     pausedTime = Date.now() - cur;
     isPaused = true;
-    }
 })
  
 document.getElementById('continue').addEventListener('click', function(){
@@ -53,6 +51,13 @@ document.getElementById('continue').addEventListener('click', function(){
         pausedTime = 0;
     }
 })
+
+
+
+
+
+
+
 
 
 
