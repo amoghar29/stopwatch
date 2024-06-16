@@ -14,7 +14,7 @@ const dif = function(){
 document.getElementById('start').addEventListener('click', function(){
     cur = Date.now();
     interval = setInterval(dif, 1000);
-    isStopped = true;
+    isStopped = false;
     
 });
 
@@ -32,7 +32,7 @@ document.getElementById('reset').addEventListener('click', function(){
     
 });
 document.getElementById('lapse').addEventListener('click', function(){
-    if (!isPaused || !isPaused){
+    if (!isPaused && !isStopped){
     const element1 = document.createElement('div');
     element1.innerHTML = (Date.now() - cur) / 1000;
     document.getElementById('display').appendChild(element1);
