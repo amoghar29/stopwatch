@@ -20,7 +20,7 @@ document.getElementById('start').addEventListener('click', function(){
 
 document.getElementById('stop').addEventListener('click', function(){
     clearInterval(interval);
-    isStopped = false;
+    isStopped = true;
 });
 document.getElementById('reset').addEventListener('click', function(){
     clearInterval(interval);
